@@ -32,7 +32,7 @@ http {
             default_type application/json;
             content_by_lua '
                 local args = ngx.req.get_uri_args();
-	            local loc = ipdb:find(args["ip"], "CN");
+                local loc = ipdb:find(args["ip"], "CN");
                 ngx.say(cjson.encode(loc));
             ';
         }
