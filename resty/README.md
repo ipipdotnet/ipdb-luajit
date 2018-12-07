@@ -22,6 +22,7 @@ http {
     init_by_lua_block {
         local city = require("resty.ipdb.city")
         ipdb = city:new("/home/frk/city.free.ipdb")
+        cjson = require("cjson")
     }
 
     server {
@@ -32,7 +33,6 @@ http {
             content_by_lua '
                 local args = ngx.req.get_uri_args();
 	            local loc = ipdb:find(args["ip"], "CN");
-                local cjson = require("cjson");
                 ngx.say(cjson.encode(loc));
             ';
         }
