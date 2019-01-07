@@ -19,6 +19,7 @@ http {
     sendfile        on;
     keepalive_timeout  65;
 
+# "/home/frk/city.free.ipdb" ipdb file path
     init_by_lua_block {
         local city = require("resty.ipdb.city")
         ipdb = city:new("/home/frk/city.free.ipdb")
