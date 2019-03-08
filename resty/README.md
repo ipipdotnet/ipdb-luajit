@@ -3,7 +3,7 @@
 ## Installing
 <pre>
     git clone https://github.com/ipipdotnet/ipdb-luajit
-    cd ipdb-luajit
+    cd ipdb-luajit/resty
     cp -R ipdb /usr/local/openresty/lualib/resty/
 </pre>
 ## Nginx.conf
