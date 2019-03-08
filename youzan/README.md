@@ -1,4 +1,5 @@
 # lua-resty-ipdb
+for ipdb replace https://github.com/youzan/ngx_http_ipip_module
 
 ## Installing
 <pre>
