@@ -90,7 +90,7 @@ local mt = {
 
 
 function _M.new(self, name)
-    local file = fopen(name)
+    local file = fopen(name, "rb")
     assert(file, name.. " db file open failed.")
     local file_size = file:seek("end")
     file:seek("set", 0)
